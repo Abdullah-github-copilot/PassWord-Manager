@@ -3,7 +3,7 @@ function encryptPassword(password, key) {
 }
 
 function decryptPassword(encryptedPassword, key) {
-    var bytes  = CryptoJS.AES.decrypt(encryptedPassword, key);
+    var bytes = CryptoJS.AES.decrypt(encryptedPassword, key);
     return bytes.toString(CryptoJS.enc.Utf8);
 }
 
@@ -94,7 +94,7 @@ const showPassword = () => {
 showPassword()
 
 
-document.querySelector(".btn").addEventListener("click", (e) => {
+document.querySelector(".butn").addEventListener("click", (e) => {
     e.preventDefault()
 
     if (!website.value || !username.value || !password.value) {
@@ -154,6 +154,6 @@ var encryptedMessage = CryptoJS.AES.encrypt("Hello, World!", "SecretKey123").toS
 console.log("Encrypted:", encryptedMessage);
 
 // Decrypt
-var bytes  = CryptoJS.AES.decrypt(encryptedMessage, "SecretKey123");
+var bytes = CryptoJS.AES.decrypt(encryptedMessage, "SecretKey123");
 var decryptedMessage = bytes.toString(CryptoJS.enc.Utf8);
 console.log("Decrypted:", decryptedMessage);
